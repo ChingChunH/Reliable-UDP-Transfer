@@ -1,34 +1,27 @@
-# Reliable_UDP
-Reliable UDP Protocol Project
+# Reliable UDP File Transfer
 
-### Proxy (C)
-- Sits between the writer and the receiver
-- Takes command line arguments for the IP address and port of the receiver, the IP address of proxy and port of the proxy
-- Continues to listen for data from the writer
-- Listen for ack from the receiver
-- Takes the % chance to drop data, drop acks, delay data, and delay acks on the command line
-- The delay is handled with random numbers
-- Forwards the ack to the writer after it has determined to either forward or drop or delay and forward the ack
-- Forwards the data to the receiver after it has determined to either forward or drop or delay and forward the data
-- Maintains a list of statistics showing how many data and acks have been sent and received, dropped and delayed
-- Stores the list of statistics in a csv file
+This project implements reliable file transfer over UDP using custom acknowledgment and retransmission mechanisms.
 
-### Writer (Go)
-- Reads from the keyboard and writes to a UDP socket
-- Takes command line arguments for the IP address of the proxy (or receiver if the proxy is removed), and the port
-- Sends data to the proxy
-- If no ack is received in a reasonable time after a packet has been sent, it resends the packet
-- Maintains a list of statistics showing how many packets have been sent and received
-- Stores the list of statistics in a file
+Originally developed as part of a collaborative project.  
+**This repository highlights my individual contributions**, including:
+- Development of the **Graphical User Interface (GUI)** for user interaction (file selection, progress display, status reporting).
+- Implementation of the **Proxy** to simulate packet loss, corruption, and manage retransmissions between sender and receiver.
 
-### Receiver (Go)
-- Reads from a UDP socket and writes to the console
-- Take a command line argument for the port to receive from
-- Receives data from the proxy
-- Sends an ack to the proxy after data is received
-- Maintains a list of statistics showing how many packets have been sent and received
-- Stores the list of statistics in a file
+➡️ [Link to original group project (2022)](https://github.com/ChingChunH/reliable_UDP)
 
-### GUI (Python)
-- Uses the statistics file outputed from the proxy to graph
-- Graphs the data on the writer, receiver, and proxy
+## 🚀 Features
+- Reliable file transfer over UDP
+- Proxy-based packet loss and corruption simulation
+- GUI for easier file selection and transfer monitoring
+- Retransmission and checksum validation mechanisms
+
+## 🛠️ Built With
+- C++ (Socket Programming)
+- Qt (for GUI)
+
+## 📜 Notes
+- This repository contains only my contributions extracted from the original group project.
+- Other components (e.g., Sender/Receiver basic structure) were developed collaboratively.
+
+---
+

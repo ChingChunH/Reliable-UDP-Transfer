@@ -7,7 +7,7 @@ This repository contains the complete project code, with **my individual contrib
 - Development of the **Graphical User Interface (GUI)** for user interaction (file selection, progress display, status reporting).
 - Implementation of the **Proxy** to simulate packet loss, corruption, and manage retransmissions between sender and receiver.
 
-➡ [Link to original group project (2022)](https://github.com/ChingChunH/reliable_UDP)
+➡ [Link to original group project (2023)](https://github.com/KYang72Bcit/reliable_UDP)
 
 ---
 
